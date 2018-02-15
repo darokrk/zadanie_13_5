@@ -15,6 +15,7 @@
   "author": "darO",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "events": "^2.0.0"
   }
 }
