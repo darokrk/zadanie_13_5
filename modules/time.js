@@ -1,5 +1,6 @@
 
 var os = require('os');
+var colors = require('colors');
 
 function time() {
 	var uptime = os.uptime();
@@ -18,7 +19,7 @@ function time() {
 	if (seconds < 10) {
 		seconds = ('0' + seconds);
 	}
-	return console.log('Uptime: ~ ' + hour + ' hours ' + minutes + ' minutes ' + seconds + ' seconds');
+	return console.log('Uptime: ~ '.rainbow + hour + ' hours ' + minutes + ' minutes ' + seconds + ' seconds');
 }
 
 exports.printTime = time;

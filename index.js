@@ -3,6 +3,7 @@
 var os = require('os');
 var OSinfo = require('./modules/OSinfo');
 var time = require('./modules/time');
+var colors = require('colors');
 
 
 process.stdin.setEncoding('utf-8');
@@ -26,7 +27,7 @@ process.stdin.on('readable', function() {
 				break;
 			case '/info':
 			// moze byc tez console.log();
-				process.stdout.write('Your version Node.js: ' + process.versions.node + '\n' + 'System Language : ' + process.env.LANG + '\n');
+				process.stdout.write('Your version Node.js: '.red + process.versions.node + '\n' + 'System Language: '.green + process.env.LANG + '\n');
 				break;
 			case '/getOSinfo':
 				OSinfo.print();
